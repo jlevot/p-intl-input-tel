@@ -1,6 +1,6 @@
 {
-    "name": "ngx-input-tel",
-    "version": "1.0.0",
+    "name": "p-intl-input-tel",
+    "version": "1.0.6",
     "private": true,
     "scripts": {
         "ng": "ng",
@@ -11,13 +11,13 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
         "build_stats": "ng build --stats-json",
-        "analyze": "webpack-bundle-analyzer dist/ngx-input-tel-app/stats.json",
+        "analyze": "webpack-bundle-analyzer dist/p-intl-input-tel-app/stats.json",
         "build_lib": "ng build p-intl-input-tel",
         "copy-license": "cp ./LICENSE ./dist/p-intl-input-tel",
         "copy-readme": "cp ./README.md ./dist/p-intl-input-tel",
         "copy-files": "npm run copy-license && npm run copy-readme",
         "npm_pack": "npm run copy-files && cd dist/p-intl-input-tel && npm pack",
-        "create-link": "cd dist/ngx-input-tel-int && npm link",
+        "create-link": "cd dist/p-intl-input-tel && npm link",
         "package": "npm run build_lib && npm run npm_pack",
         "postinstall": "ngcc"
     },

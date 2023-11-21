@@ -26,7 +26,8 @@
                             "src/styles.css",
                             "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
                             "node_modules/primeng/resources/primeng.min.css",
-                            "node_modules/primeflex/primeflex.css"
+                            "node_modules/primeflex/primeflex.css",
+                            "projects/p-intl-input-tel/src/assets/style.scss"
                         ],
                         "vendorChunk": true,
                         "extractLicenses": false,
@@ -127,7 +128,6 @@
             "root": "projects/p-intl-input-tel",
             "sourceRoot": "projects/p-intl-input-tel/src",
             "projectType": "library",
-            "prefix": "ngx",
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:ng-packagr",

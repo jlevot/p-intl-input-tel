@@ -3,7 +3,7 @@ import { PhoneNumber, PhoneNumberFormat, PhoneNumberUtil, RegionCode } from "goo
 import { LocalPhoneUtils } from "./local-phone-utils";
 import { ChangeData } from "../model/change-data";
 
-describe('NgxIntlTelInputComponent', () => {
+describe('PIntlTelInputComponent', () => {
     const phoneNumberUtils: PhoneNumberUtil = lpn.PhoneNumberUtil.getInstance();
     const defaultPhoneNumber: string = '40404040';
     const defaultRegionCode: RegionCode = 'PF';

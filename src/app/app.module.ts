@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { ButtonModule } from "primeng/button";
-import { IntlInputTelModule } from "../../projects/p-intl-input-tel/src/lib/p-intl-input-tel.module";
+import { IntlInputTelModule } from "../../projects/p-intl-input-tel/src/component/p-intl-input-tel.module";
 
 @NgModule({
     declarations: [ AppComponent ],

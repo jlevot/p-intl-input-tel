@@ -1,7 +1,7 @@
 import { async, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { IntlInputTelModule } from "../../projects/p-intl-input-tel/src/lib/p-intl-input-tel.module";
+import { IntlInputTelModule } from "../../projects/p-intl-input-tel/src/component/p-intl-input-tel.module";
 
 describe('AppComponent', () => {
     beforeEach(async(() => {

@@ -17,19 +17,18 @@ import {
 } from '@angular/core';
 import { FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR } from '@angular/forms';
 
-import { CountryISO } from './model/country-iso.enum';
-import { SearchCountryField } from './model/search-country-field';
-import { CountriesGrouped, Country } from './model/country.model';
+import { CountryISO } from '../model/country-iso.enum';
+import { SearchCountryField } from '../model/search-country-field';
+import { CountriesGrouped, Country } from '../model/country.model';
 import { BehaviorSubject } from 'rxjs';
-import { LocalPhoneUtils } from "./utils/local-phone-utils";
-import { ChangeData } from "./model/change-data";
-import { ALL_COUNTRIES } from "./data/country-code";
-import { phoneNumberValidator } from "./validator/p-intl-input-tel.validator";
+import { LocalPhoneUtils } from "../utils/local-phone-utils";
+import { ChangeData } from "../model/change-data";
+import { ALL_COUNTRIES } from "../data/country-code";
+import { phoneNumberValidator } from "../validator/p-intl-input-tel.validator";
 
 @Component({
     selector: 'p-intl-tel-input',
     templateUrl: 'p-intl-input-tel.component.html',
-    styleUrls: [ 'p-intl-input-tel.component.css', './flags/css/input-tel-intl.css' ],
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,
@@ -44,8 +43,6 @@ import { phoneNumberValidator } from "./validator/p-intl-input-tel.validator";
     ],
 })
 export class IntlInputTelComponent implements OnChanges {
-    @ViewChild('countryList') countryList: ElementRef;
-
     // Custom css classes
     @Input() cssClass = 'form-control';
     @Input() favoriteCountries: string[] = [];
@@ -147,7 +144,7 @@ export class IntlInputTelComponent implements OnChanges {
 
         this.phoneNumber$.next(number)
 
-        el?.focus();
+        setTimeout(() => el?.focus(), 100)
     }
 
     private onFavoriteCountriesChanged(): void {

@@ -1,0 +1,26 @@
+<div class="flag-container p-inputgroup">
+    <p-dropdown class="p-inputgroup-addon" [options]="countriesGrouped" [filter]="true" [filterFields]="searchCountryField"
+                [disabled]="phoneNumberControl.disabled" panelStyleClass="fixWidth" [class.withoutDialCode]="!separateDialCode" [group]="true"
+                [ngModel]="selectedCountry()" (onChange)="onCountrySelect($event.value, input)">
+        <ng-template pTemplate="selectedItem">
+            <ng-container class="flex align-items-center gap-2">
+                <div class="flex align-items-center gap-2">
+                    <div id="flag" [ngClass]="selectedCountry().flagClass"></div>
+                    <span id="dialcode" class="ms-2" *ngIf="separateDialCode">{{selectedCountry().dialCode | dialCode}}</span>
+                </div>
+            </ng-container>
+        </ng-template>
+
+        <ng-template let-country pTemplate="item">
+            <div class="flex align-items-center gap-2 w-full">
+                <div [ngClass]="country.flagClass"></div>
+                <span>{{ country.name }}</span>
+                <span>{{ country.dialCode | dialCode }}</span>
+            </div>
+        </ng-template>
+    </p-dropdown>
+
+    <input pInputText #input class="form-control" type="tel" [id]="inputId" autocomplete="off" (blur)="onTouched()"
+           [placeholder]="this.selectedCountry().placeHolder" [formControl]="phoneNumberControl" (keydown)="onInputKeyPress($event)"
+           [attr.maxLength]="maxLength" [attr.validation]="phoneValidation">
+</div>

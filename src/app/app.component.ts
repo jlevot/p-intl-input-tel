@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { PhoneNumberFormat } from 'google-libphonenumber';
-import { CountryISO } from "../../projects/p-intl-input-tel/src/lib/model/country-iso.enum";
-import { SearchCountryField } from "../../projects/p-intl-input-tel/src/lib/model/search-country-field";
+import { CountryISO } from "../../projects/p-intl-input-tel/src/model/country-iso.enum";
+import { SearchCountryField } from "../../projects/p-intl-input-tel/src/model/search-country-field";
 
 @Component({
     selector: 'app-root',

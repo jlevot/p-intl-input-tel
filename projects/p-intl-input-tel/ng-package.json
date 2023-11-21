@@ -1,7 +1,8 @@
 {
     "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
     "dest": "../../dist/p-intl-input-tel",
+    "assets": ["./src/assets"],
     "lib": {
-        "entryFile": "src/public_api.ts"
+        "entryFile": "public_api.ts"
     }
 }

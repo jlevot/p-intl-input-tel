@@ -1,0 +1,37 @@
+{
+    "name": "p-intl-input-tel",
+    "version": "1.0.0",
+    "peerDependencies": {
+        "@angular/common": "^16.2.0",
+        "@angular/core": "^16.2.0",
+        "@angular/forms": "^16.2.0",
+        "google-libphonenumber": "^3.2.33",
+        "primeng": ">= 16.0.0"
+    },
+    "dependencies": {
+        "tslib": "^2.3.0"
+    },
+    "devDependencies": {
+        "@types/google-libphonenumber": "^7.4.24"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jlevot/p-intl-input-tel.git"
+    },
+    "bugs": {
+        "url": "https://github.com/jlevot/p-intl-input-tel/issues"
+    },
+    "homepage": "https://github.com/jlevot/p-intl-input-tel#readme",
+    "author": {
+        "name": "jlevot",
+        "email": "levotjeanbaptiste@gmail.com"
+    },
+    "keywords": [
+        "angular",
+        "angular 16",
+        "p-intl-input-tel",
+        "phone number",
+        "primeNG",
+        "validation"
+    ]
+}

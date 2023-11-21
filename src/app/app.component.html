@@ -1,0 +1,49 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="margin: 50px">
+    <h1>Test International Telephone Input Form</h1>
+    <br>
+    <div class="flex flex-column gap-3">
+        <div class="flex align-items-center gap-5">
+            <button (click)="changePreferredCountries()" pButton label="Change Preferred Countries">
+            </button>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="dialCodeCheckBox" [(ngModel)]="separateDialCode">
+                <label class="form-check-label" for="dialCodeCheckBox"> Separate Dial Code? </label>
+            </div>
+        </div>
+        <div class="flex align-items-center gap-3">
+            <p-intl-tel-input
+                [favoriteCountries]="favoriteCountries"
+                [enableAutoCountrySelect]="true"
+                [displayPlaceholder]="true"
+                [selectedCountryISO]="CountryISO.FrenchPolynesia"
+                [phoneValidation]="true"
+                [separateDialCode]="separateDialCode"
+                [numberFormat]="PhoneNumberFormat.INTERNATIONAL"
+                [searchCountryField]="[SearchCountryField.NAME, SearchCountryField.ISO2, SearchCountryField.DIALCODE]"
+                cssClass="custom"
+                [formControl]="phone">
+            </p-intl-tel-input>
+
+            <p-button severity="danger" (click)="phone.reset()">Reset</p-button>
+        </div>
+    </div>
+    <br/>
+    <div>
+        <strong>Is input touched:</strong>
+        <pre>{{ phone.touched }}</pre>
+    </div>
+    <div>
+        <strong>Is input valid:</strong>
+        <pre>{{ phone.valid }}</pre>
+    </div>
+    <div>
+        <strong>Control value:</strong>
+        <pre>{{ phone.value }}</pre>
+    </div>
+    <div>
+        <strong>Control validation errors:</strong>
+        <pre>{{ phone.errors | json }}</pre>
+    </div>
+</div>

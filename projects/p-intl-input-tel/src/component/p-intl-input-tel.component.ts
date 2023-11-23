@@ -1,25 +1,12 @@
 import * as lpn from 'google-libphonenumber';
 import { PhoneNumber, PhoneNumberFormat, PhoneNumberUtil } from 'google-libphonenumber';
 
-import {
-    Component,
-    ElementRef,
-    EventEmitter,
-    forwardRef,
-    Input,
-    OnChanges,
-    Output,
-    signal,
-    SimpleChange,
-    SimpleChanges,
-    ViewChild,
-    WritableSignal,
-} from '@angular/core';
+import { Component, EventEmitter, forwardRef, Input, OnChanges, Output, signal, SimpleChange, SimpleChanges, WritableSignal, } from '@angular/core';
 import { FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { CountryISO } from '../model/country-iso.enum';
 import { SearchCountryField } from '../model/search-country-field';
-import { CountriesGrouped, Country } from '../model/country.model';
+import { Country } from '../model/country.model';
 import { BehaviorSubject } from 'rxjs';
 import { LocalPhoneUtils } from "../utils/local-phone-utils";
 import { ChangeData } from "../model/change-data";
@@ -77,7 +64,6 @@ export class IntlInputTelComponent implements OnChanges {
 
     public selectedCountry: WritableSignal<Country> = signal<Country>(new Country());
     public countries: Country[] = [];
-    public countriesGrouped: CountriesGrouped[] = [];
     public phoneNumber$ = new BehaviorSubject<PhoneNumber>(new PhoneNumber);
     public phoneNumberControl = new FormControl('');
 
@@ -91,10 +77,6 @@ export class IntlInputTelComponent implements OnChanges {
         return this.countries.filter(c => c.isFavorite);
     }
 
-    private get allExceptFavorite(): Country[] {
-        return this.countries.filter(c => !c.isFavorite);
-    }
-
     constructor() {
         this.phoneNumberControl.valueChanges.subscribe(value => {
             this.onPhoneNumberChange(value);
@@ -105,8 +87,8 @@ export class IntlInputTelComponent implements OnChanges {
     }
 
     ngOnChanges(changes: SimpleChanges) {
-        if( this.isSelectedCountryChanged(changes['selectedCountryISO']) ) this.updateSelectedCountry();
-        if( changes['favoriteCountries'] ) this.onFavoriteCountriesChanged();
+        if (this.isSelectedCountryChanged(changes['selectedCountryISO']) && !changes['selectedCountryISO'].firstChange) this.updateSelectedCountry();
+        if( changes['favoriteCountries'] && !changes['favoriteCountries'].firstChange) this.onFavoriteCountriesChanged();
     }
 
     public init(): void {
@@ -209,12 +191,7 @@ export class IntlInputTelComponent implements OnChanges {
             flagClass: `iti__flag iti__${country[1].toString().toLocaleLowerCase()}`,
             placeHolder: this.getPlaceholder(country[1].toString().toUpperCase()),
             isFavorite: this.favoriteCountries.includes(country[1].toString())
-        }));
-
-        this.countriesGrouped = [
-            { group: 'favorite', items: this.favorites },
-            { group: 'other', items: this.allExceptFavorite }
-        ]
+        })).sort((a, b) => Number(b.isFavorite) - Number(a.isFavorite));
 
         if( this.selectFirstCountry ){
             const country = this.favoriteCountries.length ? this.favorites[0] : this.countries[0];

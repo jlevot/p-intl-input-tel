@@ -20,8 +20,3 @@ export class Country {
         this.placeHolder = '';
     }
 }
-
-export class CountriesGrouped {
-    group: 'favorite' | 'other';
-    items: Country[];
-}

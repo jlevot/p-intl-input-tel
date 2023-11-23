@@ -1,10 +1,10 @@
 .p-inputgroup-addon {
     padding: 0;
     border: none;
-    flex: 0 0 8rem;
+    flex: 0 0 8rem !important;
 
     &.withoutDialCode {
-        flex: 0 0 5rem;
+        flex: 0 0 5rem !important;
     }
 
     .p-dropdown {
@@ -20,12 +20,19 @@
             border-color: #ced4da;
         }
 
-        .p-dropdown-item-group span {
-            display: none;
-        }
-
         .p-dropdown-label {
             padding-right: 0;
+
+            .ng-star-inserted:not(.flex):not(#dialcode) {
+                display: none !important;
+            }
+        }
+
+        p-dropdownitem:nth-last-child(1 of :has(.favorite)) {
+            .p-dropdown-item {
+                margin-bottom: 0.5rem;
+                border-bottom: 2px solid #ced4da;
+            }
         }
 
         .p-dropdown-trigger {

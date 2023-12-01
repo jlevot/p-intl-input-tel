@@ -16,7 +16,7 @@ export class AppComponent {
 
     public separateDialCode: boolean = true;
     public favoriteCountries: CountryISO[] = [ CountryISO.FrenchPolynesia ];
-    public phone = new FormControl({ value: '', disabled: false }, [ Validators.required ]);
+    public phone = new FormControl({ value: '+468 969-4148', disabled: false }, [ Validators.required ]);
 
     public changePreferredCountries(): void {
         this.favoriteCountries = [ CountryISO.India, CountryISO.Canada ];

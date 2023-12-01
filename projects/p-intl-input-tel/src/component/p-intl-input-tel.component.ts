@@ -147,6 +147,7 @@ export class IntlInputTelComponent implements OnChanges {
             'Insert',
             'Delete',
             'Backspace',
+            'Tab'
         ];
 
         if( !allowedChars.test(event.key)

@@ -57,6 +57,10 @@ export class IntlInputTelComponent implements OnChanges {
     // Set the language for search and display name country
     @Input() lang = 'fr';
 
+    @Input() set disabled(value: boolean) {
+        this.setDisabledState(value)
+    }
+
     @Output() readonly countryChange = new EventEmitter<Country>();
 
     public readonly SearchCountryField = SearchCountryField;
@@ -166,7 +170,7 @@ export class IntlInputTelComponent implements OnChanges {
     }
 
     setDisabledState(isDisabled: boolean): void {
-        if( isDisabled ) this.phoneNumberControl.disable();
+        isDisabled ? this.phoneNumberControl.disable() : this.phoneNumberControl.enable();
     }
 
     writeValue(obj: string): void {

@@ -13,6 +13,7 @@ Validation with [google-libphonenumber](https://github.com/ruimarinho/google-lib
 | p-intl-input-tel | Angular | PrimeNG    |
 |------------------|---------|------------|
 | 16.x.x           | 16.x.x  | \>= 16.8.0 |
+| 17.x.x           | 17.x.x  | \>= 17.2.0 |
 
 ## Installation
 

@@ -1,6 +1,6 @@
 {
     "name": "p-intl-input-tel",
-    "version": "1.1.1",
+    "version": "17.0.0",
     "peerDependencies": {
         "@angular/common": ">= 16.x < 19.0.0",
         "@angular/core": ">= 16.x < 19.0.0",

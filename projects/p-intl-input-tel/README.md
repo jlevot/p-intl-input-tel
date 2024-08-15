@@ -10,9 +10,11 @@ An Angular package for entering and validating international telephone numbers. 
 
 Validation with [google-libphonenumber](https://github.com/ruimarinho/google-libphonenumber)
 
-| p-intl-input-tel | Angular | PrimeNG    |
-|------------------|---------|------------|
-| 16.x.x           | 16.x.x  | \>= 16.8.0 |
+| p-intl-input-tel | Angular | PrimeNG     |
+|------------------|---------|-------------|
+| 16.x.x           | 16.x.x  | \>= 16.8.0  |
+| 17.x.x           | 17.x.x  | \>= 17.2.0  |
+| 18.x.x           | 18.x.x  | \>= 17.18.0 |
 
 ## Installation
 
@@ -43,10 +45,10 @@ to **angular.json** styles array:
 
 ### Import
 
-Add `IntlInputTelModule` to your module file:
+Add `IntlInputTelComponent` to your standalone component:
 
 ```javascript
-imports: [IntlInputTelModule];
+imports: [IntlInputTelComponent];
 ```
 
 You can use it by this way:

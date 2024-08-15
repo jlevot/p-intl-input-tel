@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { PhoneNumberFormat } from 'google-libphonenumber';
 import { CountryISO } from "../../projects/p-intl-input-tel/src/model/country-iso.enum";
 import { SearchCountryField } from "../../projects/p-intl-input-tel/src/model/search-country-field";
+import { IntlInputTelComponent } from '../../projects/p-intl-input-tel/src/component/p-intl-input-tel.component';
+import { ButtonModule } from 'primeng/button';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: [ './app.component.css' ],
+    standalone: true,
+    imports: [ CommonModule, IntlInputTelComponent, FormsModule, ReactiveFormsModule, ButtonModule ]
 })
 export class AppComponent {
     public readonly CountryISO = CountryISO;

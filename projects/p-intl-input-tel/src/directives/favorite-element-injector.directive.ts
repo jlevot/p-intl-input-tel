@@ -1,7 +1,8 @@
-import { Directive, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, OnInit } from '@angular/core';
 
 @Directive({
     selector: '[favorite]',
+    standalone: true
 })
 export class FavoriteElementInjectorDirective implements OnInit {
     private el;

@@ -2,7 +2,7 @@ import * as lpn from 'google-libphonenumber';
 import { PhoneNumber, PhoneNumberFormat, PhoneNumberUtil } from 'google-libphonenumber';
 
 import { Component, EventEmitter, forwardRef, Input, OnChanges, Output, signal, SimpleChange, SimpleChanges, WritableSignal, } from '@angular/core';
-import { FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { FormControl, FormsModule, NG_VALIDATORS, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 
 import { CountryISO } from '../model/country-iso.enum';
 import { SearchCountryField } from '../model/search-country-field';
@@ -12,6 +12,12 @@ import { LocalPhoneUtils } from "../utils/local-phone-utils";
 import { ChangeData } from "../model/change-data";
 import { ALL_COUNTRIES } from "../data/country-code";
 import { phoneNumberValidator } from "../validator/p-intl-input-tel.validator";
+import { DropdownModule } from 'primeng/dropdown';
+import { DialCodePipe } from '../pipe/dialCode.pipe';
+import { InputTextModule } from 'primeng/inputtext';
+import { FavoriteElementInjectorDirective } from '../directives/favorite-element-injector.directive';
+import { NativeElementInjectorDirective } from '../directives/native-element-injector.directive';
+import { FilterPipe } from '../pipe/filter.pipe';
 
 @Component({
     selector: 'p-intl-tel-input',
@@ -28,6 +34,9 @@ import { phoneNumberValidator } from "../validator/p-intl-input-tel.validator";
             multi: true,
         },
     ],
+    standalone: true,
+    imports: [ DropdownModule, InputTextModule, FormsModule, ReactiveFormsModule, DialCodePipe, FilterPipe,
+        FavoriteElementInjectorDirective, NativeElementInjectorDirective ]
 })
 export class IntlInputTelComponent implements OnChanges {
     // Custom css classes

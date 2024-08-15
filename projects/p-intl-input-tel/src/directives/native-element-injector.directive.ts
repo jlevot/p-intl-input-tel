@@ -11,6 +11,7 @@ https://stackoverflow.com/a/54075119/1617590
 */
 @Directive({
     selector: '[ngModel], [formControl], [formControlName]',
+    standalone: true
 })
 export class NativeElementInjectorDirective implements OnInit {
     constructor(private controlDir: NgControl, private host: ElementRef<HTMLFormElement>) {

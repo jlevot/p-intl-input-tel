@@ -1,12 +1,13 @@
 {
     "name": "p-intl-input-tel",
-    "version": "18.0.0",
+    "version": "18.1.0",
     "peerDependencies": {
         "@angular/common": ">= 18.x < 19.0.0",
         "@angular/core": ">= 18.x < 19.0.0",
         "@angular/forms": ">= 18.x < 19.0.0",
         "google-libphonenumber": "^3.2.33",
-        "primeng": ">= 16.x < 18.0.0"
+        "primeng": ">= 16.x < 19.0.0",
+        "@primeng/themes": "^18.0.0"
     },
     "dependencies": {
         "tslib": "^2.3.0"

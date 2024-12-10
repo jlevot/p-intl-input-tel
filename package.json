@@ -30,11 +30,12 @@
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
+    "@primeng/themes": "^18.0.0",
     "@typescript-eslint/types": "^8.0.0",
     "core-js": "^3.32.0",
     "google-libphonenumber": "^3.2.33",
     "primeflex": "^3.3.1",
-    "primeng": "^17.18.9",
+    "primeng": "^18.0.0",
     "rxjs": "~7.8.1",
     "tslib": "^2.6.1",
     "zone.js": "~0.14.10"

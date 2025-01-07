@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    standalone: true,
     imports: [ CommonModule, IntlInputTelComponent, FormsModule, ReactiveFormsModule, ButtonModule ]
 })
 export class AppComponent {

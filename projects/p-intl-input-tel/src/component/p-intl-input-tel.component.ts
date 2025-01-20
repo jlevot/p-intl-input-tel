@@ -24,12 +24,12 @@ import { LocalPhoneUtils } from "../utils/local-phone-utils";
 import { ChangeData } from "../model/change-data";
 import { ALL_COUNTRIES } from "../data/country-code";
 import { phoneNumberValidator } from "../validator/p-intl-input-tel.validator";
-import { DropdownModule } from 'primeng/dropdown';
 import { DialCodePipe } from '../pipe/dialCode.pipe';
 import { InputTextModule } from 'primeng/inputtext';
 import { FavoriteElementInjectorDirective } from '../directives/favorite-element-injector.directive';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
+import { Select } from 'primeng/select';
 
 @Component({
     selector: 'p-intl-tel-input',
@@ -46,8 +46,8 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
             multi: true,
         },
     ],
-    imports: [ DropdownModule, InputTextModule, FormsModule, ReactiveFormsModule, DialCodePipe, FavoriteElementInjectorDirective,
-        InputGroupModule, InputGroupAddonModule ]
+    imports: [ InputTextModule, FormsModule, ReactiveFormsModule, DialCodePipe, FavoriteElementInjectorDirective,
+        InputGroupModule, InputGroupAddonModule, Select ]
 })
 export class IntlInputTelComponent implements OnChanges {
     // Custom css classes

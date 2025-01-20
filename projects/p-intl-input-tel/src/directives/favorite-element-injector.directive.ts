@@ -1,19 +1,19 @@
-import { Directive, ElementRef, OnInit } from '@angular/core';
+import { Directive, ElementRef, inject, input, OnInit, Renderer2 } from '@angular/core';
 
 @Directive({
     selector: '[favorite]',
     standalone: true
 })
 export class FavoriteElementInjectorDirective implements OnInit {
-    private el;
+    private el = inject(ElementRef);
+    private renderer = inject(Renderer2);
 
-    constructor(el: ElementRef) {
-        this.el = el;
-    }
+    favoriteItemsCounter = input<number>();
 
     ngOnInit() {
-        if (this.el.nativeElement.classList.contains('favorite')) {
-            this.el.nativeElement.parentNode.parentNode.classList.add('favoriteItem')
+        const allFavorites = document.querySelectorAll('.favorite');
+        if (allFavorites[allFavorites.length - 1] === this.el.nativeElement && allFavorites.length === this.favoriteItemsCounter()) {
+            this.renderer.addClass(this.el.nativeElement, 'last-favorite-option');
         }
     }
 }

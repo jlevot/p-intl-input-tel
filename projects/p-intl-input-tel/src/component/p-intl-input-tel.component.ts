@@ -76,6 +76,8 @@ export class IntlInputTelComponent implements OnChanges {
     separateDialCode: InputSignal<boolean> = input(false);
     // Set the language for search and display name country
     lang: InputSignal<string> = input('fr');
+    // appendTo for p-select
+    appendTo: InputSignal<any|null> = input(null);
 
     readonly countryChange: OutputEmitterRef<Country> = output<Country>();
 

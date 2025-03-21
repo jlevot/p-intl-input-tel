@@ -15,6 +15,8 @@ Validation with [google-libphonenumber](https://github.com/ruimarinho/google-lib
 | 16.x.x           | 16.x.x  | \>= 16.8.0  |
 | 17.x.x           | 17.x.x  | \>= 17.2.0  |
 | 18.x.x           | 18.x.x  | \>= 17.18.0 |
+| 19.x.x           | 19.x.x  | \>= 19.0.0  |
+
 
 ## Installation
 
@@ -95,6 +97,7 @@ You can choose to use a formControl or just a formControlName. It depends on you
 | separateDialCode         | `boolean`               | `false`                           | Visually separate dialcode into the drop down element.                                                        |
 | countryChange            | `<Country>`             | `None`                            | Emits country value when the user selects a country from the dropdown.                                        |
 | lang                     | `<Country>`             | `fr`                              | Language used for country name display and search.                                                            |
+| appendTo                 | `<Country \| null>`     | `null`                            | Target element to attach the overlay.                                                                         |
 
 ## Supported Formats
 

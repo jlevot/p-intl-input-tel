@@ -3,12 +3,14 @@ import { PhoneNumber, PhoneNumberFormat, PhoneNumberUtil } from 'google-libphone
 
 import {
     Component,
+    computed,
     forwardRef,
     input,
     InputSignal,
     OnChanges,
     output,
     OutputEmitterRef,
+    Signal,
     signal,
     SimpleChange,
     SimpleChanges,
@@ -78,6 +80,11 @@ export class IntlInputTelComponent implements OnChanges {
     lang: InputSignal<string> = input('fr');
     // Target element to attach the overlay
     appendTo: InputSignal<any | null> = input(null);
+    // Custom css classes for the select overlay panel
+    panelStyleClass: InputSignal<string> = input('');
+
+    protected readonly fullPanelStyleClass: Signal<string> = computed(() => `fixWidth ${this.panelStyleClass()}`.trim())
+
 
     readonly countryChange: OutputEmitterRef<Country> = output<Country>();
 

@@ -111,7 +111,7 @@ export class IntlInputTelComponent implements OnChanges {
             this.onPhoneNumberChange(value);
         })
         this.phoneNumber$.subscribe((phoneNumber: PhoneNumber) => {
-            this.propagateChange(this.phoneUtil.format(phoneNumber, PhoneNumberFormat.INTERNATIONAL));
+            this.propagateChange(this.phoneUtil.format(phoneNumber, this.numberFormat()));
         });
     }
 

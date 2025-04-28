@@ -1,6 +1,6 @@
 <p-inputgroup>
     <p-inputgroup-addon class="p-0 border-none">
-        <p-select class="p-inputgroup-addon" [appendTo]="appendTo()" [options]="countries" [filter]="true" [filterFields]="searchCountryField()"
+        <p-select class="p-inputgroup-addon" [appendTo]="appendTo()" [options]="countries" [filter]="displaySearchCountry()" [filterFields]="searchCountryField()"
                   [resetFilterOnHide]="true" [disabled]="phoneNumberControl.disabled" [panelStyleClass]="fullPanelStyleClass()" [class.withoutDialCode]="!separateDialCode()"
                     [filterPlaceholder]="searchCountryPlaceholder()" [ngModel]="selectedCountry()" (onChange)="onCountrySelect($event.value, input)">
             <ng-template pTemplate="selectedItem">

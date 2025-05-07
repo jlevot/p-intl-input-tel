@@ -211,17 +211,34 @@ export class IntlInputTelComponent implements OnChanges {
         const regionsNames = new Intl.DisplayNames([ this.lang() ], {
             type: 'region',
         });
-        this.countries = ALL_COUNTRIES.map(country => ({
-            name: regionsNames.of(country[1].toString()?.toUpperCase()) || '',
-            iso2: country[1].toString(),
-            dialCode: country[2].toString(),
-            priority: +country[3] || 0,
-            areaCodes: (country[4] as string[]) || undefined,
-            htmlId: `item-${country[1].toString()}`,
-            flagClass: `iti__flag iti__${country[1].toString().toLocaleLowerCase()}`,
-            placeHolder: this.getPlaceholder(country[1].toString().toUpperCase()),
-            isFavorite: this.favoriteCountries()?.includes(country[1].toString()) ?? false
-        })).sort((a, b) => Number(b.isFavorite) - Number(a.isFavorite));
+        const favorites = this.favoriteCountries()?.map(code => code.toUpperCase()) ?? [];
+
+        this.countries = ALL_COUNTRIES.map(country => {
+            const countryCode = country[1].toString().toUpperCase();
+            return {
+                name: regionsNames.of(countryCode) || '',
+                iso2: countryCode,
+                dialCode: country[2].toString(),
+                priority: +country[3] || 0,
+                areaCodes: country[4] as string[] | undefined,
+                htmlId: `item-${ countryCode }`,
+                flagClass: `iti__flag iti__${ countryCode.toLowerCase() }`,
+                placeHolder: this.getPlaceholder(countryCode),
+                isFavorite: this.favoriteCountries()?.includes(country[1].toString()) ?? false
+            };
+        }).sort((a, b) => {
+            const indexA = favorites.indexOf(a.iso2);
+            const indexB = favorites.indexOf(b.iso2);
+
+            if (a.isFavorite && b.isFavorite) {
+                return indexA - indexB;
+            }
+
+            if (a.isFavorite) return -1;
+            if (b.isFavorite) return 1;
+
+            return a.name.localeCompare(b.name);
+        });
 
         if (this.selectFirstCountry()) {
             const country = this.favoriteCountries()?.length ? this.favorites[0] : this.countries[0];

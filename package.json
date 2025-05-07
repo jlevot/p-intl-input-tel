@@ -1,6 +1,6 @@
 {
   "name": "p-intl-input-tel",
-  "version": "19.0.4",
+  "version": "19.0.5",
   "private": true,
   "scripts": {
     "ng": "ng",

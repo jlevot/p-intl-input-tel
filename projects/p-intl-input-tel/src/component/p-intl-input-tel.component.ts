@@ -138,7 +138,7 @@ export class IntlInputTelComponent implements OnChanges {
             if( countryCode && countryCode !== this.selectedCountry().iso2 ){
                 const newCountry = this.countries
                     .sort((a, b) => a.priority - b.priority)
-                    .find((c) => c.iso2 === countryCode);
+                    .find((c) => c.iso2 === countryCode.toUpperCase());
                 if( newCountry ) this.setSelectedCountry(newCountry);
             }
         }

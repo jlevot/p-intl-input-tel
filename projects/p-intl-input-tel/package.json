@@ -2,18 +2,18 @@
     "name": "p-intl-input-tel",
     "version": "19.0.6",
     "peerDependencies": {
-        "@angular/common": ">= 19.0.0",
-        "@angular/core": ">= 19.0.0",
-        "@angular/forms": ">= 19.0.0",
-        "primeng": ">= 19.0.0",
-        "@primeng/themes": ">=19.0.0",
-        "google-libphonenumber": ">=3.2.33"
+        "@angular/common": ">= 20.0.0",
+        "@angular/core": ">= 20.0.0",
+        "@angular/forms": ">= 20.0.0",
+        "primeng": ">= 20.0.0",
+        "@primeng/themes": ">=20.0.0",
+        "google-libphonenumber": ">=3.2.42"
     },
     "dependencies": {
-        "tslib": "^2.3.0"
+        "tslib": "^2.8.1"
     },
     "devDependencies": {
-        "@types/google-libphonenumber": "^7.4.24"
+        "@types/google-libphonenumber": "^7.4.30"
     },
     "repository": {
         "type": "git",
@@ -32,6 +32,7 @@
         "angular 17",
         "angular 18",
         "angular 19",
+        "angular 20",
         "p-intl-input-tel",
         "phone number",
         "primeNG",

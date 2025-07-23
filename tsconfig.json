@@ -20,7 +20,7 @@
     },
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "strictPropertyInitialization": false,
     "importHelpers": true,
     "target": "ES2022",

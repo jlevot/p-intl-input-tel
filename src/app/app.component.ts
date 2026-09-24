@@ -4,7 +4,7 @@ import { PhoneNumberFormat } from 'google-libphonenumber';
 import { CountryISO } from "../../projects/p-intl-input-tel/src/model/country-iso.enum";
 import { SearchCountryField } from "../../projects/p-intl-input-tel/src/model/search-country-field";
 import { IntlInputTelComponent } from '../../projects/p-intl-input-tel/src/component/p-intl-input-tel.component';
-import { ButtonModule } from 'primeng/button';
+import { ButtonModule } from '@openng/optimus-ui/button';
 import { CommonModule } from '@angular/common';
 
 @Component({

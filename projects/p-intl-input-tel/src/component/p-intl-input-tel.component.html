@@ -1,19 +1,19 @@
 <p-inputgroup>
-    <p-inputgroup-addon class="p-0 border-none">
+    <p-inputgroup-addon class="p-intl-tel-addon">
         <p-select class="p-inputgroup-addon" [appendTo]="appendTo()" [options]="countries" [filter]="displaySearchCountry()" [filterFields]="searchCountryField()"
                   [resetFilterOnHide]="true" [disabled]="phoneNumberControl.disabled" [panelStyleClass]="fullPanelStyleClass()" [class.withoutDialCode]="!separateDialCode()"
                     [filterPlaceholder]="searchCountryPlaceholder()" [ngModel]="selectedCountry()" (onChange)="onCountrySelect($event.value, input)">
             <ng-template pTemplate="selectedItem">
-                <div class="flex align-items-center gap-2">
+                <div class="p-intl-tel-country">
                     <div id="flag" [class]="selectedCountry().flagClass"></div>
                     @if (separateDialCode()) {
-                        <span id="dialcode" class="ms-2">{{ selectedCountry().dialCode | dialCode }}</span>
+                        <span id="dialcode">{{ selectedCountry().dialCode | dialCode }}</span>
                     }
                 </div>
             </ng-template>
 
             <ng-template let-country pTemplate="item">
-                <div class="flex align-items-center gap-2 w-full" [class.favorite]="country.isFavorite" favorite
+                <div class="p-intl-tel-country p-intl-tel-option" [class.favorite]="country.isFavorite" favorite
                      [favoriteItemsCounter]="favoriteCountries()?.length">
                     <div [class]="country.flagClass"></div>
                     <span>{{ country.name }}</span>

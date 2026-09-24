@@ -26,7 +26,6 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "./node_modules/primeflex/primeflex.css",
                             "./projects/p-intl-input-tel/src/assets/style.scss"
                         ],
                         "extractLicenses": false,

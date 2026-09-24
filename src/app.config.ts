@@ -2,8 +2,8 @@ import { ApplicationConfig, enableProdMode } from "@angular/core";
 import { provideAnimations } from "@angular/platform-browser/animations";
 import 'zone.js';
 import { environment } from './environments/environment';
-import { providePrimeNG } from 'primeng/config';
-import Lara from '@primeng/themes/lara';
+import { provideOptimus } from '@openng/optimus-ui/config';
+import Lara from '@openng/optimus-ui-themes/lara';
 
 if (environment.production) {
     enableProdMode();
@@ -12,7 +12,7 @@ if (environment.production) {
 export const appConfig: ApplicationConfig = {
     providers: [
         provideAnimations(),
-        providePrimeNG({
+        provideOptimus({
             theme: {
                 preset: Lara
             }

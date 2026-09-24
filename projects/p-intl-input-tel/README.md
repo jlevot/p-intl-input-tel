@@ -10,12 +10,15 @@ An Angular package for entering and validating international telephone numbers. 
 
 Validation with [google-libphonenumber](https://github.com/ruimarinho/google-libphonenumber)
 
-| p-intl-input-tel | Angular | PrimeNG     |
-|------------------|---------|-------------|
-| 16.x.x           | 16.x.x  | \>= 16.8.0  |
-| 17.x.x           | 17.x.x  | \>= 17.2.0  |
-| 18.x.x           | 18.x.x  | \>= 17.18.0 |
-| 19.x.x           | 19.x.x  | \>= 19.0.0  |
+| p-intl-input-tel | Angular | UI library          |
+|------------------|---------|---------------------|
+| 16.x.x           | 16.x.x  | PrimeNG >= 16.8.0   |
+| 17.x.x           | 17.x.x  | PrimeNG >= 17.2.0   |
+| 18.x.x           | 18.x.x  | PrimeNG >= 17.18.0  |
+| 19.x.x           | 19.x.x  | PrimeNG >= 19.0.0   |
+| 20.x.x           | 20.x.x  | PrimeNG >= 20.0.0   |
+| 21.0.x           | 21.x.x  | PrimeNG >= 21.0.0   |
+| 21.1.x           | 21.x.x  | Optimus UI >= 1.0.2 |
 
 
 ## Installation
@@ -26,7 +29,9 @@ Validation with [google-libphonenumber](https://github.com/ruimarinho/google-lib
 
 `$ npm install google-libphonenumber --save`
 
-`$ npm install primeng`
+`$ npm install @openng/optimus-ui`
+
+For p-intl-input-tel 21.0.x and older, install `primeng` instead.
 
 ### Add Dependency Style
 

@@ -2,8 +2,8 @@
 <div style="margin: 50px">
     <h1>Test International Telephone Input Form</h1>
     <br>
-    <div class="flex flex-column gap-3">
-        <div class="flex align-items-center gap-5">
+    <div style="display: flex; flex-direction: column; gap: 1rem">
+        <div style="display: flex; align-items: center; gap: 2rem">
             <button (click)="changePreferredCountries()" pButton label="Change Preferred Countries">
             </button>
 
@@ -12,7 +12,7 @@
                 <label class="form-check-label" for="dialCodeCheckBox">Separate Dial Code?</label>
             </div>
         </div>
-        <div class="flex align-items-center gap-3">
+        <div style="display: flex; align-items: center; gap: 1rem">
             <p-intl-tel-input
                 [favoriteCountries]="favoriteCountries"
                 [enableAutoCountrySelect]="true"

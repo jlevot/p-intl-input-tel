@@ -27,11 +27,11 @@ import { ChangeData } from "../model/change-data";
 import { ALL_COUNTRIES } from "../data/country-code";
 import { phoneNumberValidator } from "../validator/p-intl-input-tel.validator";
 import { DialCodePipe } from '../pipe/dialCode.pipe';
-import { InputTextModule } from 'primeng/inputtext';
+import { InputTextModule } from '@openng/optimus-ui/inputtext';
 import { FavoriteElementInjectorDirective } from '../directives/favorite-element-injector.directive';
-import { InputGroupModule } from 'primeng/inputgroup';
-import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
-import { Select } from 'primeng/select';
+import { InputGroupModule } from '@openng/optimus-ui/inputgroup';
+import { InputGroupAddonModule } from '@openng/optimus-ui/inputgroupaddon';
+import { Select } from '@openng/optimus-ui/select';
 
 @Component({
     selector: 'p-intl-tel-input',

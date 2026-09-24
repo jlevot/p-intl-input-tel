@@ -23,7 +23,7 @@
     .p-select-label {
       padding-right: 0;
 
-      .ng-star-inserted:not(.flex):not(#dialcode) {
+      .ng-star-inserted:not(.p-intl-tel-country):not(#dialcode) {
         display: none !important;
       }
     }

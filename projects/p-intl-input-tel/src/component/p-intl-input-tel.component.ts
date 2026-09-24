@@ -2,6 +2,7 @@ import * as lpn from 'google-libphonenumber';
 import { PhoneNumber, PhoneNumberFormat, PhoneNumberUtil } from 'google-libphonenumber';
 
 import {
+    ChangeDetectionStrategy,
     Component,
     computed,
     forwardRef,
@@ -36,6 +37,7 @@ import { Select } from '@openng/optimus-ui/select';
 @Component({
     selector: 'p-intl-tel-input',
     templateUrl: 'p-intl-input-tel.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,

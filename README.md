@@ -19,6 +19,7 @@ Validation with [google-libphonenumber](https://github.com/ruimarinho/google-lib
 | 20.x.x           | 20.x.x  | PrimeNG >= 20.0.0   |
 | 21.0.x           | 21.x.x  | PrimeNG >= 21.0.0   |
 | 21.1.x           | 21.x.x  | Optimus UI >= 1.0.2 |
+| 22.x.x           | 22.x.x  | Optimus UI >= 2.0.2 |
 
 ## Installation
 
@@ -37,10 +38,11 @@ For p-intl-input-tel 21.0.x and older, install `primeng` instead.
 to **angular.json** styles array:
 
 ```json
-
-"styles": [
-"./node_modules/p-intl-input-tel/src/assets/style.scss"
-],
+{
+  "styles": [
+    "./node_modules/p-intl-input-tel/src/assets/style.scss"
+  ]
+}
 ```
 
 ### Install This Library

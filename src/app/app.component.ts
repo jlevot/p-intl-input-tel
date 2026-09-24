@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { PhoneNumberFormat } from 'google-libphonenumber';
 import { CountryISO } from "../../projects/p-intl-input-tel/src/model/country-iso.enum";
@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [ CommonModule, IntlInputTelComponent, FormsModule, ReactiveFormsModule, ButtonModule ]
 })
 export class AppComponent {

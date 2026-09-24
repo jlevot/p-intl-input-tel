@@ -82,7 +82,6 @@
                 "lint": {
                     "builder": "@angular-eslint/builder:lint",
                     "options": {
-                        "eslintConfig": ".eslintrc.js",
                         "lintFilePatterns": [
                             "src/**/*.ts",
                             "src/**/*.html"
@@ -111,7 +110,6 @@
                 "lint": {
                     "builder": "@angular-eslint/builder:lint",
                     "options": {
-                        "eslintConfig": ".eslintrc.js",
                         "lintFilePatterns": [
                             "src/**/*.ts",
                             "src/**/*.html"
@@ -135,7 +133,6 @@
                 "lint": {
                     "builder": "@angular-eslint/builder:lint",
                     "options": {
-                        "eslintConfig": ".eslintrc.js",
                         "lintFilePatterns": [
                             "src/**/*.ts",
                             "src/**/*.html"
